@@ -2,13 +2,42 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Blog sobre Leishmaniose</title>
+  <title>Blog da Leishmaniose</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <script>
+    function revelarImagem() {
+      const imagem = document.getElementById("imagemSensivel");
+      const aviso = document.getElementById("aviso");
+      imagem.classList.remove("blur");
+      aviso.style.display = "none";
+    }
+  </script>
+  <style>
+    .blur {
+      filter: blur(12px);
+      transition: filter 0.5s;
+    }
+    #aviso {
+      text-align: center;
+      margin: 20px 0;
+      background-color: #ffdddd;
+      padding: 15px;
+      border: 1px solid #ff8888;
+      border-radius: 6px;
+    }
+    #aviso button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      background-color: #d00000;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Leishmaniose: o que é?</h1>
+    <h1>Blog da Leishmaniose</h1>
     <nav>
       <ul>
         <li><a href="index.html">Início</a></li>
@@ -20,25 +49,19 @@
         <li><a href="referencias.html">Referências</a></li>
       </ul>
     </nav>
-    <button id="toggle-dark">Alternar modo escuro</button>
   </header>
   <main>
-    <section>
-      <h2>O que é a Leishmaniose?</h2>
-      <p>
-        A leishmaniose é uma doença infecciosa causada por parasitas do gênero <strong>Leishmania</strong>. 
-        É transmitida pela picada de insetos conhecidos como flebótomos ou “mosquito-palha”.
-      </p>
-      <p>
-        Ela afeta tanto humanos quanto animais, especialmente cães, e pode se apresentar em diferentes formas clínicas.
-      </p>
-    </section>
-    <section>
-      <img src="leishmaniose.jpg" alt="Imagem ilustrativa da leishmaniose" style="max-width:100%;">
-    </section>
+    <h2>Bem-vindo ao Blog sobre Leishmaniose</h2>
+    <p>Explore as páginas acima para aprender sobre essa doença, sua prevenção, tratamento e muito mais.</p>
+    <div id="aviso">
+      <strong>Aviso:</strong> A imagem abaixo contém conteúdo sensível (ferida causada por leishmaniose). Clique no botão para visualizar.
+      <br>
+      <button onclick="revelarImagem()">Mostrar Imagem</button>
+    </div>
+    <img id="imagemSensivel" src="leishmaniose_ferida.jpg" alt="Ferida causada por leishmaniose" class="blur">
   </main>
   <footer>
-    <p>Blog educativo - Trabalho escolar | 2025</p>
+    <p>Blog educativo - Trabalho ecossistemas | 2025</p>
   </footer>
 </body>
 </html>
