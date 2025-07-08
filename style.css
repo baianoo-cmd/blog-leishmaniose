@@ -1,47 +1,101 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f3f3f3;
-  color: #333;
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f4fa;
+  color: #1e1e2f;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
 body.dark-mode {
   background-color: #121212;
-  color: #e0e0e0;
+  color: #f1f1f1;
 }
+
 header {
-  background-color: #006400;
+  background-color: #3a0ca3;
   color: white;
   padding: 20px;
   text-align: center;
+  min-height: 100px;
 }
+
 nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
   padding: 0;
-  background-color: #228B22;
+  background-color: #7209b7;
 }
+
 nav ul li {
   margin: 0 10px;
 }
+
 nav ul li a {
   color: white;
   text-decoration: none;
   padding: 10px;
+  display: block;
 }
+
 nav ul li a:hover {
-  background-color: #2E8B57;
+  background-color: #b5179e;
 }
+
 main {
   padding: 20px;
+  flex: 1;
 }
+
 footer {
-  background-color: #006400;
+  background-color: #3a0ca3;
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 15px;
+  margin-top: auto;
 }
+
 button#toggle-dark {
-  margin-top: 10px;
-  padding: 5px 10px;
+  margin-top: 20px;
+  padding: 10px 16px;
+  background-color: #560bad;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button#toggle-dark:hover {
+  background-color: #7b2cbf;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  display: block;
+}
+
+a {
+  color: white;
+}
+
+h1, h2, h3 {
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  margin-bottom: 10px;
 }
